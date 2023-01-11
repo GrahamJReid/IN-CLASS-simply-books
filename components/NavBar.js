@@ -6,6 +6,7 @@ import Link from 'next/link';
 import {
   Navbar, Container, Nav,
 } from 'react-bootstrap';
+import SignOut from './SignOut';
 
 export default function NavBar() {
   return (
@@ -23,6 +24,15 @@ export default function NavBar() {
             </Link>
             <Link passHref href="/book/new">
               <Nav.Link>Create Book</Nav.Link>
+            </Link>
+            <Link passHref href="/authors">
+              <Nav.Link>Authors</Nav.Link>
+            </Link>
+            <Link passHref href="/author/new">
+              <Nav.Link>Create Author</Nav.Link>
+            </Link>
+            <Link passHref href="/profile">
+              <Nav.Link>Profile</Nav.Link>
             </Link>
           </Nav>
         </Navbar.Collapse>
