@@ -9,6 +9,8 @@ export default function UserProfile() {
   return (
     <div>
      <p>{user.displayName}</p>
+     <p>{user.email}</p>
+     <p>{user.metadata.lastSignInTime}</p>
      <Button type="button" size="lg" className="copy-btn" onClick={signOut}>
         Sign Out
       </Button>
