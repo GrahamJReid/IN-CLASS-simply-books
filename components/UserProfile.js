@@ -5,6 +5,7 @@ import{ useAuth } from '../utils/context/authContext'
 
 export default function UserProfile() {
   const {user} = useAuth();
+  console.warn(user);
   return (
     <div>
      <p>{user.displayName}</p>
