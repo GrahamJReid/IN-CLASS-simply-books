@@ -6,7 +6,6 @@ import Link from 'next/link';
 import {
   Navbar, Container, Nav,
 } from 'react-bootstrap';
-import SignOut from './SignOut';
 
 export default function NavBar() {
   return (
