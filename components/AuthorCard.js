@@ -43,5 +43,6 @@ first_name: PropTypes.string,
 last_name: PropTypes.string,
 image: PropTypes.string,
 favorite: PropTypes.bool,
-  }).isRequired
+  }).isRequired,
+  onUpdate: PropTypes.func.isRequired,
 }
