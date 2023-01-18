@@ -15,7 +15,7 @@ const getAllFavoriteAuthors = ()=>{
   
   return (
     <div>{authors.map((authors)=> (
-      <AuthorCard key={authors.firebaseKey} authorObj ={authors}/>
+      <AuthorCard key={authors.firebaseKey} authorObj = {authors} onUpdate={getAllFavoriteAuthors}/>
     ))}</div>
   )
 }

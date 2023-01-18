@@ -9,13 +9,16 @@ export default function ShowAuthors() {
   const [authors, setAuthors] = useState([]);
   const { user } = useAuth();
   const router = useRouter();
+  const displayAuthors = ()=>{
+    getAuthors(user.uid).then(setAuthors);
+  }
 
   useEffect(()=>{
     getAuthors(user.uid).then(setAuthors);
   }, []);
   return (
     <div>{authors.map((author)=> (
-     < AuthorCard key={author.firebaseKey} authorObj={author} />
+     < AuthorCard key={author.firebaseKey} authorObj={author} onUpdate ={displayAuthors} />
      ) )}</div>
   )
 }

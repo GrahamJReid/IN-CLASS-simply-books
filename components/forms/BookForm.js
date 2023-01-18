@@ -122,7 +122,7 @@ function BookForm({ obj }) {
           name="description"
           value={formInput.description}
           onChange={handleChange}
-          required
+          
         />
       </FloatingLabel>
 

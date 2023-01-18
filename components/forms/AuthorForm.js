@@ -36,11 +36,10 @@ export default function AuthorForm({ obj }) {
     } else {
       const payload = { ...formInput, uid: user.uid };
       createAuthor(payload).then(() => {
-        router.push('/');
+        router.push('/authors');
       });
     }
-  };
-  
+  };  
   return (
 
     <Form onSubmit ={handleSubmit}>

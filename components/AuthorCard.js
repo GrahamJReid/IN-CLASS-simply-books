@@ -6,11 +6,11 @@ import Link from 'next/link'
 import { deleteAuthorBooks } from '../api/mergedData'
 import { useRouter } from 'next/router'
 
-export default function AuthorCard({authorObj}) {
+export default function AuthorCard({authorObj, onUpdate}) {
   const router = useRouter();
   const deleteThisAuthor = () => {
     if (window.confirm(`Delete ${authorObj.first_name}?`)) {
-      deleteAuthorBooks(authorObj.firebaseKey).then(() => router.push('/'));
+      deleteAuthorBooks(authorObj.firebaseKey).then(() => onUpdate());
     }
   };
   return (
